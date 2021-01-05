@@ -219,20 +219,16 @@ button[type="submit"]:hover{
     background-color: #ccc;
 }
 
-.card .desContain p{
-    /* margin-top: 0; */
-    /* display: block; */
-}
-
 .collapse{
     overflow: hidden;
-    /* overflow: auto; */
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     /* white-space: normal; */
-    /* height: 100%; */
+}
+.collapse *{
+    display: inline-block;
 }
 
 .seeMore{
