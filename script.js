@@ -81,7 +81,7 @@ form.addEventListener('submit', async (e) => {
 
     try{
         const results = await axios.get(`https://api.rawg.io/api/games`, config)
-        console.log(results.data)
+        // console.log(results.data)
         if(results.data.count!=0){
             for(let res of results.data.results){
                 const resDetail = await axios.get(`https://api.rawg.io/api/games/${res.id}`)
@@ -171,7 +171,11 @@ const displayCard = (res) => {
     divDesContain.classList.add('desContain')
     const description = document.createElement('div')
     description.classList.add('description','collapse')
-    description.innerHTML = res.description
+    // <p>會使 text-overflow: ellipsis 產生問題
+    let resDes = res.description
+        .replaceAll('<p>', '<br>').replaceAll('</p>', '<br>')
+    if(resDes.startsWith('<br>')) resDes = resDes.slice(4)
+    description.innerHTML = resDes
     
     // see more
     const seeMore = document.createElement('div')
