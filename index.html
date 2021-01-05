@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Search for Games (=^..^=)</title>    
+</head>
+
+<body>
+    <header>
+        <div id="searchContainer">
+            <h1>Search for Games <i class="fas fa-gamepad"></i></h1>
+            <form id="searchForm">
+                <input type="search" value="Cytus" placeholder="Search for games..." name="query">
+                &ensp;
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            
+            <h4 id="btnOption">Advanced Options&ensp;<i class="fas fa-plus-square"></i></h4>
+            <!-- <hr> -->
+            <ul id="options">
+                <li id="ordering">
+                    <b>Ordering:</b>&ensp;
+                    <select name="ordering">
+                        <option class="orderingOpt" value="" selected>Default</option>
+                        <option class="orderingOpt" value="-released">Released Date (new to old)</option>
+                        <option class="orderingOpt" value="released">Released Date (old to new)</option>
+                        <option class="orderingOpt" value="-rating">Rating (high to low)</option>
+                        <option class="orderingOpt" value="rating">Rating (low to high)</option>
+                    </select>
+                </li>
+                <li id="genres">
+                    <b>Genres:</b>
+                </li>
+                <li id="platforms">
+                    <b>Platforms:</b>
+                    <!-- <input type="checkbox" id="pc" name="genres" value="4"><label for="pc">PC</label> -->
+                </li>
+            </ul>
+            
+        </div>
+    </header> 
+
+    <div id="container">
+        <ul id="cards">
+            <!-- <li class="card">
+                <div class="mainContain">
+                    <div class="img"></div>
+                    <div class="contain">
+                        <h3>Game</h3>
+                        <ul class="tag">
+                            <li>RPG</li>
+                            <li>Action</li>
+                            <li>Indie</li>
+                        </ul>
+                        <ul class="info">
+                            <li><b>Released Date</b> :  2011-12-04</li>
+                            <li><b>Platform</b> :  PC</li>
+                            <li><b>Developer</b> :  Dev</li>
+                            <li><b>Average Rating</b> :  4.5/5</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desContain">
+                    <div class="description collapse" >
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum fugit voluptate asperiores a veniam saepe repellendus molestiae, amet labore pariatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde reiciendis omnis repudiandae mollitia recusandae distinctio provident deleniti eius cupiditate id?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, sequi!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore odio ab, corporis dolore quae minus enim dignissimos sint perspiciatis inventore iste quidem quia reprehenderit ea quod vitae cupiditate temporibus aspernatur.
+                    </div>
+                    <div class="seeMore more">
+                        <i class="fas fa-angle-double-down"></i>&ensp;&ensp;<b>See More</b>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+        <div class="placeholder">
+            <div class="startSearching">Let's start searching...<i class="fas fa-smile"></i></div>
+            <div class="noResult">No result&ensp;<i class="fas fa-sad-tear"></i></div>
+        </div>
+        <div class="la-pacman la-2x"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+    </div>
+
+    <div class="toTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
