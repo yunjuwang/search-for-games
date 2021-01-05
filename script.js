@@ -96,12 +96,12 @@ form.addEventListener('submit', async (e) => {
             $('.la-pacman').fadeOut()
             $('.noResult').fadeIn()
         }
-
     } catch(e){
         console.log(e)
     }
     
     btnSubmit.disabled = false;
+    inputSearch.disabled = false;
 })
 
 const displayCard = (res) => {
