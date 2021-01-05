@@ -220,16 +220,19 @@ button[type="submit"]:hover{
 }
 
 .card .desContain p{
-    margin-top: 0;
+    /* margin-top: 0; */
+    /* display: block; */
 }
 
 .collapse{
-    overflow:hidden;
+    overflow: hidden;
+    /* overflow: auto; */
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
-    white-space: nowrap;
+    /* white-space: normal; */
+    /* height: 100%; */
 }
 
 .seeMore{

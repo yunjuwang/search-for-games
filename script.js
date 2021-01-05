@@ -169,7 +169,7 @@ const displayCard = (res) => {
     // div.desContain
     const divDesContain = document.createElement('div')
     divDesContain.classList.add('desContain')
-    const description = document.createElement('span')
+    const description = document.createElement('div')
     description.classList.add('description','collapse')
     description.innerHTML = res.description
     
