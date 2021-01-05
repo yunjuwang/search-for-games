@@ -229,6 +229,7 @@ button[type="submit"]:hover{
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+    white-space: nowrap;
 }
 
 .seeMore{
