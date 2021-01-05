@@ -50,6 +50,8 @@ form.addEventListener('submit', async (e) => {
 
     const btnSubmit = document.querySelector('button[type="submit"]')
     btnSubmit.disabled = true;
+    const inputSearch = document.querySelector('input[type="search"]')
+    inputSearch.disabled = true;
     $('.startSearching').fadeOut()
     $('.noResult').fadeOut()
     $('.la-pacman').fadeIn()

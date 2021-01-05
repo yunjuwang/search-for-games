@@ -234,7 +234,7 @@ button[type="submit"]:hover, button[type="submit"]:active{
     /* white-space: normal; */
 }
 .collapse *{
-    /* display: inline-block; */
+    display: inline-block;
 }
 
 .seeMore{
