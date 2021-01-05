@@ -44,19 +44,24 @@ $('#btnOption').click(()=>{
     $('#options').slideToggle()
 })
 
+const btnSubmit = document.querySelector('button[type="submit"]')
+const inputSearch = document.querySelector('input[type="search"]')
+const ul = document.querySelector('#cards')
+let loading = false;
+
 const form = document.querySelector('#searchForm')
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const btnSubmit = document.querySelector('button[type="submit"]')
+    if(loading) return;
+    else loading = true
+
     btnSubmit.disabled = true;
-    const inputSearch = document.querySelector('input[type="search"]')
     inputSearch.disabled = true;
     $('.startSearching').fadeOut()
     $('.noResult').fadeOut()
     $('.la-pacman').fadeIn()
-    
-    const ul = document.querySelector('#cards')
+
     ul.innerText = ''
 
     const orderingValue = document.querySelector('.orderingOpt:checked').value
@@ -102,6 +107,7 @@ form.addEventListener('submit', async (e) => {
     
     btnSubmit.disabled = false;
     inputSearch.disabled = false;
+    loading = false;
 })
 
 const displayCard = (res) => {
